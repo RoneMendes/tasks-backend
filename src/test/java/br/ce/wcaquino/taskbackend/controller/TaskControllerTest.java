@@ -58,7 +58,7 @@ public class TaskControllerTest {
 		todo.setTask("Descricao");
 		todo.setDueDate(LocalDate.of(2010, 01, 01)); 
 		try {
-			controller.save(todo);   //controller vai salvar a tarefa
+			controller.save(todo);   //controller vai salvar a tarefa.
 			Assert.fail("Não deveria chegar nesse ponto");
 		} catch (ValidationException e) {
 			Assert.assertEquals("Due date must not be in past", e.getMessage()); //verifica se a excessão lançada é realmente a esperada.
